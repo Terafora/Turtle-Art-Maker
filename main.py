@@ -8,8 +8,15 @@ def makeASquare():
         brush.forward(100)
         brush.right(90)
 
+def dashedLine():
+    for i in range(50):
+        brush.forward(5)
+        brush.penup()
+        brush.forward(5)
+        brush.pendown()
 
 
+dashedLine()
 
 
 
