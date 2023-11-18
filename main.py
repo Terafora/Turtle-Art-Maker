@@ -4,6 +4,10 @@ import random
 brush = Turtle()
 brush.shape("arrow")
 brush.pencolor("#b342f5")
+brush.pensize(3)
+brush.speed(5)
+
+random_direction = [90, 180, 270, 360]
 
 def makeASquare():
     for i in range(4):
@@ -32,9 +36,15 @@ def makeMultipleShapes():
             brush.right(360/side)
         side += 1
 
-makeMultipleShapes()
+def randomWalk():
+    for i in range(100):
+        steps = int(random.random() * 100)
+        angle = int(random.choice(random_direction))
+        brush.right(angle)
+        brush.fd(steps)
+        setRandomColour()
 
-
+randomWalk()
 
 
 
