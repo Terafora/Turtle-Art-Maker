@@ -1,4 +1,6 @@
 from turtle import Turtle, Screen
+import random
+
 brush = Turtle()
 brush.shape("arrow")
 brush.pencolor("#b342f5")
@@ -15,11 +17,22 @@ def dashedLine():
         brush.forward(5)
         brush.pendown()
 
+def setRandomColour():
+    red = random.random()
+    green = random.random()
+    blue = random.random()
+    brush.pencolor(red, green, blue)
 
-dashedLine()
+def makeMultipleShapes():
+    side = 3
+    while side <= 8:
+        setRandomColour()
+        for i in range(side):
+            brush.forward(50)
+            brush.right(360/side)
+        side += 1
 
-
-
+makeMultipleShapes()
 
 
 
