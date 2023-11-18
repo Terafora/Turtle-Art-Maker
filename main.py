@@ -38,10 +38,9 @@ def makeMultipleShapes():
 
 def randomWalk():
     for i in range(100):
-        steps = int(random.random() * 100)
         angle = int(random.choice(random_direction))
         brush.right(angle)
-        brush.fd(steps)
+        brush.fd(30)
         setRandomColour()
 
 randomWalk()
