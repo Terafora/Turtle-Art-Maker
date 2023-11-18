@@ -9,9 +9,6 @@ def makeASquare():
         brush.right(90)
 
 
-makeASquare()
-
-
 
 
 
